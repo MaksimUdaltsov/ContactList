@@ -63,24 +63,3 @@ final class DataStore {
     
     private init() {}
 }
-
-final class PersonManager {
-    static let shared = PersonManager()
-    private let dataStore = DataStore.shared
-    
-    private init() {}
-                        
-    
-    func add(name: String) {
-        if !dataStore.names.contains(name) {
-            dataStore.names.append(name)
-        }
-    }
-    
-    func getNames() {
-        dataStore.names.forEach { name in
-            print(name)
-        }
-    }
-}
-
